@@ -28,8 +28,6 @@ namespace Translator
                 // Update the JSON dictionary with values from the DataTable
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    //string key = row[0].ToString(); // Assuming the first column contains the JSON keys
-                    //string value = row[1].ToString(); // Assuming the second column contains the replacement values
                     string key = row[keyColumnName].ToString(); // Replace "keyColumnName" with the actual column name containing the JSON keys
                     string value = row[valueColumnName].ToString(); // Replace "valueColumnName" with the actual column name containing the replacement values
 

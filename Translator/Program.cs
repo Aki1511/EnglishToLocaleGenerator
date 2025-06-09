@@ -12,10 +12,14 @@ class Program
     static void Main(string[] args)
     {
         Console.ForegroundColor = ConsoleColor.DarkYellow;
-        Console.WriteLine("-----------------------------------------------------------------------------------------------");
-        Console.WriteLine("NOTE: Ensure that the latest en.json file is located at the path specified in appsettings.json.");
-        Console.WriteLine("      Also, verify that the path is correctly set; otherwise, the code will not work.");
-        Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+        Console.WriteLine("IMPORTANT NOTES:"); 
+        Console.WriteLine("     1. Ensure that the latest en.json file is located at the path specified in appsettings.json.");
+        Console.WriteLine("     2. Verify that the path is correctly set; otherwise, the code will not work.");
+        Console.WriteLine("     3. Always begin by generating the Excel file using JSON keys and English values from the en.json file (Step 1).");
+        Console.WriteLine("        Additionally, ensure that translations for any newly added JSON keys are included in the Excel.");
+        Console.WriteLine("        This guarantees that all new keys have corresponding translations.");
+        Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
         Console.WriteLine();
         Console.ResetColor();
 
@@ -26,7 +30,7 @@ class Program
         Console.Write("What would you like to choose?: ");
         var userSelection = Console.ReadLine();
         Console.WriteLine();
-        Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
         Console.WriteLine();
 
         // Build configuration to read from appsettings.json
