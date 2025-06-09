@@ -26,19 +26,30 @@ namespace Translator
                 // Convert the flattened data to an Excel file
                 ConvertToExcel(flattenedData, excelFilePath);
 
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine($"Excel file created successfully at: {excelFilePath}");
+                Console.ResetColor();
             }
             catch (FileNotFoundException)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Error: The specified file was not found.");
+                Console.ResetColor();
             }
             catch (JsonException)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Error: The file content is not a valid JSON.");
+                Console.ResetColor();
             }
             catch (Exception ex)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+                Console.ResetColor();
             }
         }
 

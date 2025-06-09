@@ -62,7 +62,10 @@ namespace Translator
             }
             catch (Exception ex)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"An error occurred while reading the Excel file: {ex.Message}");
+                Console.ResetColor();
                 throw;
             }
 

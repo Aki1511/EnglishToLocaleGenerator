@@ -31,3 +31,4 @@ C:\Users\AKSSALVI\source\repos\Translator\Translator\bin\Debug\net8.0\ExcelNumbe
 C:\Users\AKSSALVI\source\repos\Translator\Translator\bin\Debug\net8.0\RBush.dll
 C:\Users\AKSSALVI\source\repos\Translator\Translator\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\AKSSALVI\source\repos\Translator\Translator\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\AKSSALVI\source\repos\Translator\Translator\obj\Debug\net8.0\Translator.sourcelink.json

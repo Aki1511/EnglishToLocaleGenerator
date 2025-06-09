@@ -50,11 +50,16 @@ namespace Translator
                 };
                 File.WriteAllText(outputFilePath, JsonSerializer.Serialize(updatedJson, serializerOptions));
                 Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine($"JSON file updated successfully at: {outputFilePath}");
+                Console.ResetColor();
             }
             catch (Exception ex)
             {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"An error occurred while updating the JSON file: {ex.Message}");
+                Console.ResetColor();
             }
         }
 

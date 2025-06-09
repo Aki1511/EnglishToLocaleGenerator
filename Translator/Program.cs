@@ -11,7 +11,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
         Console.WriteLine("-----------------------------------------------------------------------------------------------");
         Console.WriteLine("NOTE: Ensure that the latest en.json file is located at the path specified in appsettings.json.");
         Console.WriteLine("      Also, verify that the path is correctly set; otherwise, the code will not work.");
@@ -25,7 +25,9 @@ class Program
         Console.WriteLine();
         Console.Write("What would you like to choose?: ");
         var userSelection = Console.ReadLine();
-        Console.WriteLine("------------------------------------------------------------------------");
+        Console.WriteLine();
+        Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        Console.WriteLine();
 
         // Build configuration to read from appsettings.json
         var configuration = new ConfigurationBuilder()
@@ -92,12 +94,16 @@ class Program
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"Error: {ex.Message}");
+                Console.ResetColor();
             }
         }
         else 
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Invalid selection. Please select either 1 or 2.");
+            Console.ResetColor();
             return;
         }
     }
